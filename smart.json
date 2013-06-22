@@ -1,0 +1,8 @@
+{
+  "name": "module",
+  "description": "Simple in-project dependency manager",
+  "homepage": "https://github.com/Mystor/meteor-module",
+  "author": "Michael Layzell",
+  "version": "0.0.1",
+  "git": "https://github.com/Mystor/meteor-module.git"
+}
