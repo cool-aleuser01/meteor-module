@@ -49,13 +49,13 @@ module(function() {
 ```
 ## API Reference
 ### `module('moduleName')`
-Use the module _moduleName_.  Returns the module's exports.
+Use the module 'moduleName'.  Returns the module's exports.
 
 ### `module('moduleName', [autorun,] function() {})`
-Define the module _moduleName_ to be the passed function.  If autorun is truthy, the module will be executed when the event loop is idle.  If autorun is not passed, it will default to `true`.  The return value of the module will be returned when the module is used with `module('moduleName')`.
+Define the module 'moduleName' to be the passed function.  If `autorun` is truthy, the module will be executed when the event loop is idle.  If `autorun` is not passed, it will default to `true`.  The return value of the module will be returned when the module is used with `module('moduleName')`.
 
 ### `module(function() {})`
-Define an anonymous module to be the passed function.  It will be executed when the event loop is idle.  This is equivalent to running setTimeout(0, function() {});
+Define an anonymous module to be the passed function.  It will be executed when the event loop is idle.  This is equivalent to running `setTimeout(0, function() {});`
 
 ## Word of Warning
 Meteor-Module will not make any effort to prevent cyclic dependencies.  Code like the following will hang.
