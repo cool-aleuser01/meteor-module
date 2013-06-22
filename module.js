@@ -38,7 +38,7 @@ var register = function(name, module, autorun) {
   }
 };
 
-function module() {
+module = function module() {
   switch (arguments.length) {
     case 1:
       if (typeof arguments[0] === 'function') {
@@ -60,4 +60,4 @@ function module() {
     default:
       throw 'module() only accepts 1, 2 or 3 arguments';
   }
-}
+};
