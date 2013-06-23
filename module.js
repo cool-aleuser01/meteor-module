@@ -31,8 +31,7 @@ var register = function(name, module, autorun) {
   modules[name] = module;
 
   if (autorun) {
-    setTimeout(0, function() {
-      // Run the module automatically 
+    Meteor.defer(function() {
       use(name);
     });
   }
@@ -43,7 +42,7 @@ module = function module() {
     case 1:
       if (typeof arguments[0] === 'function') {
         // Anonymous module definition
-        setTimeout(0, arguments[0]);
+        Meteor.defer(arguments[0]);
       } else {
         // Module usage
         return use(arguments[0]);
