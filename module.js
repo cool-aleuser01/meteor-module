@@ -9,6 +9,7 @@ var runModule = function(name) {
   }
 
   exports[name] = toexport;
+  return toexport;
 };
 
 var use = function(name) {
@@ -16,7 +17,7 @@ var use = function(name) {
     return exports[name];
   } else {
     if (modules[name]) {
-      runModule(name);
+      return runModule(name);
     } else {
       throw 'Cannot use module `'+name+'`, as it does not exist';
     }
